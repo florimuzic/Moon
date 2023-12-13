@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: #000;
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.moon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    filter: brightness(1.2) drop-shadow(0 0 150px rgba(100,100,100,1)) drop-shadow(0 0 30px rgba(100,100,100,1));
+    animation: moon 12s infinite;
+}
+
+.cloud {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: cloud 15s infinite;
+}
+
+.cloud2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    transform: translate(-20%, -30%);
+    animation: cloud 20s infinite;
+}
+
+.cloud3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-20%, -30%);
+    animation: cloud 26s infinite;
+}
+
+.star {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: star 6s infinite;
+    background-color: #fff;
+}
+
+.star-2 {
+    top: 20%;
+    left: 40%;
+    width: 5px;
+    height: 5px;
+}
+
+.star-3 {
+    top: 30%;
+    left: 20%;
+    width: 5px;
+    height: 5px;
+}
+
+.star-4 {
+    top: 70%;
+    left: 15%;
+    width: 3px;
+    height: 3px;
+}
+
+.star-5 {
+    top: 30%;
+    left: 65%;
+    width: 5px;
+    height: 5px;
+}
+
+.star-6 {
+    top: 20%;
+    left: 85%;
+    width: 10px;
+    height: 10px;
+}
+
+.star-7 {
+    top: 85%;
+    left: 75%;
+    width: 10px;
+    height: 10px;
+}
+
+@keyframes moon {
+    0% {
+        filter: brightness(1.4) drop-shadow(0 0 150px rgba(100,100,100,1)) drop-shadow(0 0 30px rgba(100,100,100,1));
+    }
+    50% {
+        filter: brightness(1) drop-shadow(0 0 120px rgba(100,100,100,1)) drop-shadow(0 0 10px rgba(100,100,100,1));
+    }
+    100% {
+        filter: brightness(1.4) drop-shadow(0 0 150px rgba(100,100,100,1)) drop-shadow(0 0 30px rgba(100,100,100,1));
+    }
+}
+
+@keyframes cloud {
+    0% {
+        transform: translate(150%, -50%);
+    }
+    100% {
+        transform: translate(-150%, -50%);
+    }
+}
+
+@keyframes star {
+    0% {
+        box-shadow: 0px 0px 8px white, 0px 0px 21px white, 0px 0px 15px white;
+    }
+    50% {
+        box-shadow: 0px 0px 3px white, 0px 0px 15px white, 0px 0px 5px white;
+    }
+    100% {
+        box-shadow: 0px 0px 8px white, 0px 0px 21px white, 0px 0px 15px white;
+    }
+}
